@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vehiculo.js"></script>
+    <script src="./auto.js"></script>
+    <script src="./camioneta.js"></script>
+    <script src="./funciones.js"></script>
+
+    <title>Segundo Parcial</title>
+</head>
+<body>
+    <!--<input type="button" id="btnHacerRuido" value="Hacer Ruido">-->
+
+    <!--ABM DE ANIMALES-->
+    <label for="Tipotxt">Tipo Vehiculo</label>
+        <select id="tipoVehitxt" name="tipoVehi">
+            <option>Seleccione Tipo</option>
+        </select>
+
+
+
+    <div class="container">
+        <div class="auto" id="auto">
+            <label for="marcatxt">Marca</label>
+            <input id="marcatxt" type="text" name='marca' required>
+    
+            <label for="modelotxt">Modelo</label>
+            <input id="modelotxt" type="text" name='modelo' required>
+
+            <label for="preciotxt">Precio</label>
+            <input id="preciotxt" type="text" name='precio' required>
+
+            <label for="puertastxt">Puertas</label>
+            <input id="puertastxt" type="number" name='puertas' required>
+
+            <input id="btnAltaAuto" type="button" value="Agregar Auto">
+        </div>
+        <div class="camioneta" id="camioneta">
+            <label for="marcaCtxt">Marca</label>
+            <input id="marcaCtxt" type="text" name='marcaC' required>
+    
+            <label for="modeloCtxt">Modelo</label>
+            <input id="modeloCtxt" type="text" name='modeloC' required>
+
+            <label for="precioCtxt">Precio</label>
+            <input id="precioCtxt" type="text" name='precioC' required>
+
+            <label for="cuatroXcuatrotxt">Traccion</label>
+            <select id="cuatroXcuatrotxt" name="tipoVcuatroXcuatroehi">
+                <option>Elija Traccion</option>
+                <option>4x4</option>
+                <option>4x2</option>
+            </select>
+            
+
+            <input id="btnAltaCamio" type="button" value="Agregar Camioneta">
+        </div>
+
+    </div>
+
+    <label for="fitro">Filtrar Tipo</label>
+    <select id="filtrarTipo" name="filtroTipo">
+        <option>Filtre Tipo</option>
+    </select>
+
+    <table id="tabla" class="table">
+        <thead id="thead" hidden=true>
+            <tr>
+                <th> Id     </th> 
+                <th> Marca  </th> 
+                <th> Modelo </th>
+                <th> Precio </th>
+                <th> Otros </th>
+                <th> Tipo </th>
+
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+    </table>
+    <div >
+        <label for="promedio">Promedio</label>
+        <input id="promedio" type="text" name='promedio'>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <form id="formDatos" action="#" class="form">
+            <fieldset>
+                <div id="divDatos" class="form-group">
+                    <div class="btnCerrar">
+                        <input type="button" id="btnCerrar" value="X">
+                    </div>
+                    <div hidden=true>
+                        <label for="txtId">Id</label>
+                        <input id="txtId" type="text" name='id'>
+                    </div>
+                    <label for="txtMarca">Marca</label>
+                    <input id="txtMarca" type="text" name='vMarca' required>
+
+                    <div id="txtModelo" > 
+                        <label for="txtModelo">Modelo</label>
+                        <input id="txtModelo" type="text" name='vModelo' required>
+                    </div>
+                    <div id="txtPrecio" >
+                        <label for="precioA">Precio</label>
+                        <input id="precioA" type="text" name='vPrecio' required>
+                    </div>
+                    <div id="txtPuertas" >
+                        <label for="puertasA">Puertas</label>
+                        <input id="puertasA" type="text" name='aPuertas' required>
+                    </div>
+                    <div id="txtcuatroXcuatro" >
+                        <label for="4x4">Traccion</label>
+                        <select id="4x4" name="cCuatroXcuatro">
+                            <option>Elija Traccion</option>
+                            <option>4x4</option>
+                            <option>4x2</option>
+                        </select>
+                    </div>
+                        
+                    <label for="tipotxt">Tipo Vehiculo</label>
+                    <input id="tipotxt" type="text" name='tipo' readonly>
+
+                    <div class="botones">
+                        <input id="btnBaja" type="button"  value="Eliminar">
+                        <input id="btnModificar" type="button" value="Modificar">
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+</body>
+</html>
